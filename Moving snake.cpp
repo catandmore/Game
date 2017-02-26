@@ -1,7 +1,10 @@
 #include<stdio.h>
+#define _x 12
+#define _y 20 
 int main()
 {
-	int a[12][20]={0};
+	//二维数组定义墙 
+	int a[_x][_y]={0};
 	a[1][1]=5;
 	a[2][1]=4;
 	a[3][1]=3;
@@ -10,9 +13,9 @@ int main()
 	int x,y,X,Y;
 	char con;
 	
-	for(int i=0;i<12;i++)
+	for(int i=0;i<_x;i++)
 	{
-		for(int j=0;j<20;j++)
+		for(int j=0;j<_y;j++)
 			printf("%d ",a[i][j]);
 		printf("\n");
 	}
@@ -21,9 +24,9 @@ int main()
 	{
 		getchar();
 		//找到蛇头并记录位置 
-		for(int i=0;i<12;i++)
+		for(int i=0;i<_x;i++)
 		{
-			for(int j=0;j<20;j++)
+			for(int j=0;j<_y;j++)
 			{
 				if(a[i][j]==1)
 				{
@@ -73,9 +76,9 @@ int main()
 				
 		}
 		//打印图像 
-		for(int i=0;i<12;i++)
+		for(int i=0;i<_x;i++)
 		{
-			for(int j=0;j<20;j++)
+			for(int j=0;j<_y;j++)
 				printf("%d ",a[i][j]);
 			printf("\n");
 		}
